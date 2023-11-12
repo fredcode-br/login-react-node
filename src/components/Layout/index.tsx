@@ -1,21 +1,15 @@
-import LayoutHeader from "../LayoutHeader"
+import ContainerFluid from "../ContainerFluid"
 import Content from "../Content"
-import SideNav from "../SideNav"
+import SideNav from "./SideNav"
 
 const Layout = () => {
     return (
-        <div 
-            className="grid h-screen" 
-            style={{ 
-                gridTemplateColumns: '220px auto',
-                gridTemplateAreas: `'AS MH' 
-                                    'AS CT'`
-             }}
-        >
-            <LayoutHeader />
-            <SideNav />
-            <Content />
-        </div>
+       <ContainerFluid>
+            <div className="flex w-full p-0 m-0">
+                <SideNav />
+                <Content />
+            </div>
+       </ContainerFluid> 
     )
 }
 

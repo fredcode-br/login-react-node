@@ -1,21 +1,20 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import DashBoard from "../../pages/Dashboard";
+// import { Routes, Route, BrowserRouter } from "react-router-dom";
+// import DashBoard from "../../pages/Dashboard";
+import Header from "./Header";
 
 const Content = () => {
     return (
         <div 
-            className="flex flex-col items-center relative bg-ligth-300 overflow-y-scroll pt-10" 
-            style={{ 
-                gridArea: 'CT', 
-                height: '88vh'
-            }}
+            className="w-full flex flex-col items-center relative " 
         >
-            <BrowserRouter>
+            <Header />
+            {/* <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<DashBoard />} />
                     <Route path="/dashboard" element={<DashBoard />} />
                 </Routes>
-            </BrowserRouter>
+            </BrowserRouter> */}
+            <h3>Home</h3>
         </div>
     )
 };

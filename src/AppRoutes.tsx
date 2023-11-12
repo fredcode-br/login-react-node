@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import BasePage from "./pages/BasePage";
+// import BasePage from "./pages/BasePage";
 import BasePageForm from "./pages/BasePageForm";
 
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -15,10 +15,11 @@ function AppRoutes() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<BasePage />}>
+                <Route path="/" element={<Layout />} />
+                {/* <Route path="/" element={<BasePage />}>
                     <Route index element={<Home />} />
                     <Route path="/home" element={<Home />} />
-                </Route>
+                </Route> */}
                 <Route element={<PrivateRoute />}>
                         <Route path="/" element={<Layout />} />
                 </Route>
